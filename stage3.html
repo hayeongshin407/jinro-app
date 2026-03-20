@@ -625,7 +625,7 @@ async function suggestGoal() {
   loading.innerHTML = '<div class="loading-inline"><div class="dots-sm"><span></span><span></span><span></span></div>AI가 목표를 써주고 있어...</div>';
 
   const system = `너는 특수학급 중학생의 진로탐색을 돕는 따뜻한 AI야.
-반드시 JSON만 출력해. 마크다운 없이.`;
+출력 규칙: 반드시 순수한 JSON 객체만 출력해. 절대로 ```json 이나 ``` 같은 마크다운 코드블록 사용 금지. 설명 문장 금지. { 로 시작해서 } 로 끝나는 JSON만 출력.`;
 
   const { name, topTypes, selectedJob } = step1Data;
   const prompt = `
@@ -682,7 +682,7 @@ async function loadPlanOptions() {
   loading.innerHTML = '<div class="loading-inline"><div class="dots-sm"><span></span><span></span><span></span></div>나침이가 계획을 추천하고 있어...</div>';
 
   const system = `너는 특수학급 중학생의 진로탐색을 돕는 따뜻한 AI야.
-반드시 JSON만 출력해. 마크다운 없이.`;
+출력 규칙: 반드시 순수한 JSON 객체만 출력해. 절대로 ```json 이나 ``` 같은 마크다운 코드블록 사용 금지. 설명 문장 금지. { 로 시작해서 } 로 끝나는 JSON만 출력.`;
 
   const { name, topTypes, selectedJob } = step1Data;
   const prompt = `
@@ -789,7 +789,7 @@ function confirmPlans() {
 // ── STEP 3: 포트폴리오 생성 ───────────────────────
 async function generatePortfolio() {
   const system = `너는 특수학급 중학생의 진로탐색을 돕는 따뜻한 AI야.
-반드시 JSON만 출력해. 마크다운 없이.`;
+출력 규칙: 반드시 순수한 JSON 객체만 출력해. 절대로 ```json 이나 ``` 같은 마크다운 코드블록 사용 금지. 설명 문장 금지. { 로 시작해서 } 로 끝나는 JSON만 출력.`;
 
   const { name, topTypes, selectedJob, intro } = step1Data;
   const prompt = `
